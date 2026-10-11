@@ -1,17 +1,14 @@
-lic = []
+mang = []
 while True:
-    s = input().strip()
+    s = input()
     if s == "":
         break
-    mang = s.split()
-    lic.append(mang)
+    mang.append(s)
+def sua_doi(mang):
+    for i in range(len(mang)):
+        mang[i] = mang[i].title()
+    mang_moi = set(mang)
+    list_moi = list(mang_moi)
+    return list_moi
 
-def viet_hoa(x):
-    x = x.upper()
-    lic_moi = []
-    for i in x:
-        if i not in lic_moi:
-            lic_moi.append(i)
-    return lic_moi
-
-print(viet_hoa(lic))
+print(sua_doi(mang))
